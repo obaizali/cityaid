@@ -1,0 +1,106 @@
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(26, 94, 113, 0.80);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(26, 94, 113, 0.70);
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+
+body{
+    background: url(./../img/bg.jpg) no-repeat fixed 50% 0;
+    background-size: cover;
+}
+.page-container{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.custom-tabs{
+    margin-top: 5px;
+    padding-bottom: 5px;
+    /*border-bottom: 2px solid rgba(26, 94, 113, 0.80);*/
+}
+.custom-tabs a.active{
+    border: 2px solid rgba(26, 94, 113, 0.70);
+    background: rgba(26, 94, 113, 0.70);
+    color: white;
+}
+.custom-tabs a{
+    margin-top: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: large;
+    display: block;
+    border: 2px solid rgba(26, 94, 113, 0.80);
+    color: rgba(26, 94, 113, 0.80);
+    padding: 15px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+}
+.custom-tabs a:hover{
+    background: rgba(26, 94, 113, 0.80);
+    color: white;
+}
+.twitter-feed{
+    margin-top: 15px;
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    max-height: 650px;
+    overflow: scroll;
+}
+.post-wrapper{
+    margin-top: 15px;
+    background: #ffffff;
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.post-wrapper .post-title{
+    padding: 5px 10px;
+    color: rgba(26, 94, 113, 0.80);
+    border-bottom: 2px solid rgba(26, 94, 113, 0.80);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.post-wrapper .post-desc{
+    padding: 5px 10px;
+    margin-top: 5px;
+    color: #515254;
+}
+.post-wrapper .post-date{
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-top: 1px solid #515254;
+}
+
+@media only screen and (max-width: 786px) {
+    html,body{
+        overflow-x: hidden !important;
+    }
+}

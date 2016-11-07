@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="initial-width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body ng-app="myApp">
+<div class="page-container" ng-controller="newsCtrl">
+    <div class="row text-center custom-tabs">
+        <div class="col-sm-3">
+            <a class="btn" ng-click="set_tab('1')" ng-class="{active:sel_tab==1}">All</a>
+        </div>
+        <div class="col-sm-3">
+            <a class="btn" ng-click="set_tab('2')" ng-class="{active:sel_tab==2}">Politics</a>
+        </div>
+        <div class="col-sm-3">
+            <a class="btn" ng-click="set_tab('3')" ng-class="{active:sel_tab==3}">Sports</a>
+        </div>
+        <div class="col-sm-3">
+            <a class="btn" ng-click="set_tab('4')" ng-class="{active:sel_tab==4}">Events</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-9">
+            <div class="post-wrapper" ng-repeat="n in nlist | filter:{category:curr_tab}">
+                <span class="hidden">{{n.category}}</span>
+                <h2 class="post-title">{{n.title}}</h2>
+                <p class="post-desc">{{n.post}}</p>
+                <p class="post-date">Posted on: <b>{{n.timestamp}}</b></p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3 twitter-feed visible-md visible-lg">
+            <a class="twitter-timeline" href="https://twitter.com/city_aid/lists/city-aid">A Twitter List by city_aid</a>
+        </div>
+    </div>
+</div>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="js/newsJS.js"></script>
+</body>
+</html>
