@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City-Aid Complaint Form</title>
+    <meta name="viewport" content="initial-width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link href="./../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./../css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="css/complaint.css">
+
+    <script type="text/javascript" src="./../js/jquery-2.1.4.min.js"></script>
+
+    <script src="./../js/modernizr.custom.js"></script>
+</head>
+<body ng-app="myApp">
+<div class="top-bar">
+    <div class="container">
+        <div class="header-nav">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <h1><a class="navbar-brand" href="index.html">City-Aid</a></h1>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav class="linkEffects linkHoverEffect_12">
+                        <ul>
+                            <li><a class="active"><span>Submit your complaints here</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div ng-controller="comCtrl">
+    <div class="page-container spacing-top">
+        <h3>See if your complaint already exists</h3>
+        <div class="row">
+            <div class="col-sm-12">
+                <input id="search" type="text" placeholder="Enter your complaint" ng-model="searchQuery">
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container clist spacing-top">
+        <div class="row">
+            <div class="col-sm-12" ng-repeat="c in clist | filter:{ques:searchQuery}">
+                <p class="name">{{c.name}} <i>says,</i></p>
+                <p class="ques">{{c.ques}}</p>
+                <p class="pincode">Pincode: {{c.pin}}</p>
+                <h3 class="status" ng-class="{solved:getStatus(0, $index), pending:getStatus(1, $index), rejected:getStatus(2, $index)}">{{c.status}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/complaintJS.js"></script>
+</body>
+</html>

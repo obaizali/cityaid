@@ -1,0 +1,109 @@
+.top-bar{
+    position: relative;
+}
+.page-container{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header{
+    display: block;
+    width: 100%;
+    margin: 0;
+    background: rgba(26, 94, 113, 0.80);
+    padding: 25px 0;
+}
+.header a{
+    color: white;
+    text-align: center;
+}
+.spacing-top{
+    margin-top: 30px;
+}
+#search{
+    border: 1px solid darkgrey;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    -webkit-transition: all 350ms;
+    -moz-transition: all 350ms;
+    -ms-transition: all 350ms;
+    -o-transition: all 350ms;
+    transition: all 350ms;
+}
+#search:focus,
+#search:active{
+    border: 1px solid rgba(26, 94, 113, 0.80);
+    -webkit-box-shadow: 0 0 5px red;
+    -moz-box-shadow: 0 0 5px red;
+    box-shadow: 0 0 5px rgba(26, 94, 113, 0.80);
+}
+.clist .row .col-sm-12{
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.clist .name{
+    font-size: larger;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.26);
+}
+.clist .ques{
+    padding: 5px;
+    margin: 5px auto;
+    border-left: 3px solid rgba(26, 94, 113, 0.80);
+    background: rgba(26, 94, 113, 0.05);
+}
+.clist .pincode{
+    padding: 5px;
+    margin: 5px auto;
+    text-align: right;
+    border-right: 3px solid rgba(26, 94, 113, 0.80);
+}
+.clist .status{
+    border-top: 1px solid rgba(33, 33, 33, 0.26);
+    padding: 10px 0 10px 5px;
+    margin-left: 15px;
+    position: relative;
+    text-transform: capitalize;
+}
+.clist .status::before{
+    z-index: 999;
+    content: '';
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    right: 100%;
+    left: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.clist .status.solved{
+    color: lime;
+}
+.clist .status.pending{
+    color: rgba(220, 154, 32, 1);
+}
+.clist .status.rejected{
+    color: red;
+}
+
+.clist .status.solved::before{
+    background: lime;
+}
+.clist .status.pending::before{
+    background: rgba(220, 154, 32, 1);
+}
+.clist .status.rejected::before{
+    background: red;
+}

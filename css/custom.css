@@ -1,0 +1,16 @@
+#slider li .slider-info *{
+    margin: 0 auto;
+    background: rgba(26, 94, 113, 0.80);
+    max-width: 1090px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+#slider li .slider-info h2{
+    padding-bottom: 0;
+    color: white;
+}
+#slider li p.italic{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    padding-bottom: 0;
+}

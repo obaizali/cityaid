@@ -76,8 +76,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			height: 400px;
 			-webkit-filter: grayscale(100%);
 			filter: grayscale(100%);
+			-webkit-transition: filter 500ms;
+			-moz-transition: filter 500ms;
+			-ms-transition: filter 500ms;
+			-o-transition: filter 500ms;
+			transition: filter 500ms;
+		}
+		#googleMap:hover{
+			-webkit-filter: grayscale(30%);
+			filter: grayscale(30%);
 		}
 	</style>
+
+	<link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 <!--Header-->
@@ -105,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a class="active" href="index.html"><span>Home</span></a></li> 
 										<li><a class="scroll" href="#about"><span>About</span></a></li> 
 										<li><a class="scroll" href="#service"><span>Services</span></a></li> 
-										<li><a class="scroll" href="#team"><span>Complaint</span></a></li>
+										<li><a class="" href="complaint/" target="_blank"><span>Complaint</span></a></li>
 										<li><a class="scroll" href="#gallery"><span>Iconic places</span></a></li>
 										<li><a class="active" href="login.html"><span>Login</span></a></li>
 										<li><a class="scroll" href="#contact"><span>Contact</span></a></li> 
@@ -127,11 +138,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img src="images/banner1.jpg" class="img-responsive" alt="Real Plot">
 						</div>
 						<div class="slider-info">
-							<span class="italic">kolkata </span>
-							<h3> an easy way to make your city perfect.</h3>
+							<p class="italic">KOLKATA</p>
+							<h4>An easy way to make your city perfect.</h4>
 							<h2>just lodge report of what is to be improve and get it done.</h2>
 						    <p></p>
-							
 						</div>
 					</li>
 					<li>
@@ -139,9 +149,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img src="images/banner2.jpg" class="img-responsive" alt="Real Plot">
 						</div>
 						<div class="slider-info">
-							<span class="italic"> KOLKATA</span>
-							<h3> Get all the updtes of the city.</h3>
-							<h2>know what is happening around you. </h2>
+							<p class="italic">KOLKATA</p>
+							<h4>Get all the updates of the city.</h4>
+							<h2>know what is happening around you.</h2>
 							<p></p>
 						</div>
 					</li>
@@ -150,10 +160,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img src="images/banner3.jpg" class="img-responsive" alt="Real Plot">
 						</div>
 						<div class="slider-info">
-							<span class="italic">KOLKATA</span>
-							<h3> Lodge your grievance and get it done by the officials </h3>
-							<h2>Follow your grievance status and send a reminder.</h2>
-							<p>Easy Platform to get your goverment jobs done in a quick steps. </p>
+							<p class="italic">KOLKATA</p>
+							<h4>Lodge your grievance and get it done by the officials.</h4>
+							<h2>follow your grievance status and send a reminder.</h2>
+							<p></p>
 						</div>
 					</li>
 					<li>
@@ -161,9 +171,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img src="images/banner4.jpg" class="img-responsive" alt="Real Plot">
 						</div>
 						<div class="slider-info">
-							<span class="italic">KOLKATA</span>
-							<h4>Map service to get an easy route to reach your desirsd destinations.</h4>
-							<h3>Know all the goverment offices around your location.</h3>
+							<p class="italic">KOLKATA</p>
+							<h4>Map service to get an easy route to reach your desired destinations.</h4>
+							<h2>know all the government offices around your location.</h2>
 							<p></p>
 						</div>
 					</li>
@@ -489,11 +499,12 @@ $('#characterLeft').removeClass('red');
 </div>
 <!-- Add Google Maps -->
 <div id="googleMap">
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR9Iv1ubjMAddMZ4goZxPSL_pqhQOfSSw"></script>
 <script>
-	var myCenter = new google.maps.LatLng(22.5726, 88.3639);
+
 
 	function initialize() {
+		var myCenter = new google.maps.LatLng(22.5726, 88.3639);
 		var mapProp = {
 			center:myCenter,
 			zoom:12,
@@ -506,6 +517,7 @@ $('#characterLeft').removeClass('red');
 
 		var marker = new google.maps.Marker({
 			position:myCenter,
+			icon: 'images/blue-pushpin.png'
 		});
 
 		marker.setMap(map);

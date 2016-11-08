@@ -10,7 +10,7 @@ $(document).ready(function(){
         data.append('category', category);
         $.ajax({
             type: 'POST',
-            url: 'http://localhost/city_aid/web2/news/php/admin.php',
+            url: 'http://localhost/cityaid/news/php/admin.php',
             processData: false,
             contentType: false,
             data: data,

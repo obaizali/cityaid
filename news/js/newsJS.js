@@ -4,7 +4,7 @@ app.controller('newsCtrl', function($scope, $http) {
     $scope.nlist = [];
     $http({
         method: 'POST',
-        url: 'http://localhost/city_aid/web2/news/php/news.php',
+        url: 'http://localhost/cityaid/news/php/news.php',
         data: {},
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })

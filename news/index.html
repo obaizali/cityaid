@@ -2,18 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>City News</title>
     <meta name="viewport" content="initial-width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:700,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
+    <link href="./../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./../css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="css/news.css">
+
+    <script type="text/javascript" src="./../js/jquery-2.1.4.min.js"></script>
+
+
+    <script src="./../js/modernizr.custom.js"></script>
 </head>
+
+
+
+
 <body ng-app="myApp">
+
+<div class="header">
+    <div class="page-container">
+        <a href="./../index.html" target="_blank" title="City-Aid"><h1>City-Aid</h1></a>
+    </div>
+</div>
+
+<div class="page-container">
+    <h1 class="news-heading">GET ALL THE UPDATES OF THE CITY.</h1>
+</div>
+
 <div class="page-container" ng-controller="newsCtrl">
     <div class="row text-center custom-tabs">
         <div class="col-sm-3">
